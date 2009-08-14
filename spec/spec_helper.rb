@@ -4,7 +4,7 @@ require 'rubygems'
 gem 'rspec', '~>1.2'
 require 'spec'
 
-require Pathname(__FILE__).dirname.expand_path.parent + 'lib/dm-is-example'
+require Pathname(__FILE__).dirname.expand_path.parent + 'lib/dm-is-extendable'
 
 def load_driver(name, default_uri)
   return false if ENV['ADAPTER'] != name.to_s

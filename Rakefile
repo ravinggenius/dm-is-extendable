@@ -11,7 +11,7 @@ require ROOT + 'lib/dm-is-example/is/version'
 AUTHOR = 'John Doe'
 EMAIL  = 'john [a] doe [d] com'
 GEM_NAME = 'dm-is-example'
-GEM_VERSION = DataMapper::Is::Example::VERSION
+GEM_VERSION = DataMapper::Is::Extendable::VERSION
 GEM_DEPENDENCIES = [['dm-core', GEM_VERSION]]
 GEM_CLEAN = %w[ log pkg coverage ]
 GEM_EXTRAS = { :has_rdoc => true, :extra_rdoc_files => %w[ README.txt LICENSE TODO History.txt ] }

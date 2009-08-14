@@ -1,6 +1,6 @@
 module DataMapper
   module Is
-    module Example
+    module Extendable
       VERSION = '0.9.12'
     end
   end
