@@ -17,8 +17,9 @@ GEM_CLEAN = %w[ log pkg coverage ]
 GEM_EXTRAS = { :has_rdoc => true, :extra_rdoc_files => %w[ README LICENSE TODO HISTORY ] }
 
 PROJECT_NAME = 'datamapper'
-PROJECT_URL  = "http://github.com/datamapper/dm-more/tree/master/#{GEM_NAME}"
-PROJECT_DESCRIPTION = PROJECT_SUMMARY = 'DRY multi-table inheritence.'
+#PROJECT_URL  = "http://github.com/datamapper/dm-more/tree/master/#{GEM_NAME}"
+PROJECT_URL  = "http://github.com/ravinggenius/dm-is-extendable/tree/master"
+PROJECT_DESCRIPTION = PROJECT_SUMMARY = 'DRY multi-table inheritence for DataMapper.'
 
 [ ROOT, ROOT.parent ].each do |dir|
   Pathname.glob(dir.join('tasks/**/*.rb').to_s).each { |f| require f }

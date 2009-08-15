@@ -1,6 +1,6 @@
 = dm-is-extendable
 
-DRY multi-table inheritence.
+DRY multi-table inheritence for DataMapper.
 
 COPYRIGHT
 =========
