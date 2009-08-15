@@ -1,3 +1,8 @@
 = dm-is-extendable
 
-Description of plugin. What it does, and how.
+DRY multi-table inheritence.
+
+COPYRIGHT
+=========
+
+Copyright (c) 2009 Raving Genius. See LICENSE for details.
