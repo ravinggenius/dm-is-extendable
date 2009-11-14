@@ -1,10 +1,9 @@
 require 'pathname'
-require 'rubygems'
 
 ROOT    = Pathname(__FILE__).dirname.expand_path
 JRUBY   = RUBY_PLATFORM =~ /java/
-WINDOWS = Gem.win_platform?
-SUDO    = (WINDOWS || JRUBY) ? '' : ('sudo' unless ENV['SUDOLESS'])
+WINDOWS = Gem.win_platform? || (JRUBY && ENV_JAVA['os.name'] =~ /windows/i)
+SUDO    = WINDOWS ? '' : ('sudo' unless ENV['SUDOLESS'])
 
 require ROOT + 'lib/dm-is-extendable/is/version'
 
@@ -14,7 +13,7 @@ GEM_NAME = 'dm-is-extendable'
 GEM_VERSION = DataMapper::Is::Extendable::VERSION
 GEM_DEPENDENCIES = [['dm-core', GEM_VERSION]]
 GEM_CLEAN = %w[ log pkg coverage ]
-GEM_EXTRAS = { :has_rdoc => true, :extra_rdoc_files => %w[ README LICENSE TODO HISTORY ] }
+GEM_EXTRAS = { :has_rdoc => true, :extra_rdoc_files => %w[ README.rdoc LICENSE TODO History.rdoc ] }
 
 PROJECT_NAME = 'datamapper'
 #PROJECT_URL  = "http://github.com/datamapper/dm-more/tree/master/#{GEM_NAME}"

@@ -1,7 +1,7 @@
-HISTORY
+History.rdoc
 LICENSE
-MANIFEST
-README
+Manifest.txt
+README.rdoc
 Rakefile
 TODO
 lib/dm-is-extendable.rb
@@ -10,3 +10,5 @@ lib/dm-is-extendable/is/version.rb
 spec/integration/extendable_spec.rb
 spec/spec.opts
 spec/spec_helper.rb
+tasks/install.rb
+tasks/spec.rb

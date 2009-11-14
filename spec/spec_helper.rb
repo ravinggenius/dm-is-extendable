@@ -1,10 +1,14 @@
-require 'pathname'
 require 'rubygems'
 
-gem 'rspec', '~>1.2'
-require 'spec'
+# use local dm-core if running from a typical dev checkout.
+lib = File.join('..', '..', 'dm-core', 'lib')
+$LOAD_PATH.unshift(lib) if File.directory?(lib)
+require 'dm-core'
 
-require Pathname(__FILE__).dirname.expand_path.parent + 'lib/dm-is-extendable'
+# Support running specs with 'rake spec' and 'spec'
+$LOAD_PATH.unshift('lib') unless $LOAD_PATH.include?('lib')
+
+require 'dm-is-extendable'
 
 def load_driver(name, default_uri)
   return false if ENV['ADAPTER'] != name.to_s
